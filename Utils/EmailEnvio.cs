@@ -9,9 +9,10 @@ namespace api_email.Utils
     public class EmailEnvio: IEmailEnvio
     {
         public EmailSettings _emailSettings {get;}
+        
         public EmailEnvio(IOptions<EmailSettings> EmailSettings)
         {
-                _emailSettings = EmailSettings.Value;
+            _emailSettings = EmailSettings.Value;
         }
 
         public Task EnviarEmailAsync(string email, string assunto, string mensagem)
@@ -36,7 +37,7 @@ namespace api_email.Utils
 
                 MailMessage mail = new MailMessage()
                 {
-                    From = new MailAddress(_emailSettings.EmailUsuario, "Prefeitura Municipal de Patos de Minas")
+                    From = new MailAddress(_emailSettings.EmailUsuario, "Suporte Agendamento Vacinação")
                 };
 
                 mail.To.Add(new MailAddress(destinatario));

@@ -98,7 +98,7 @@ namespace api_email
             app.UseSwaggerUI(c =>
             {
                 c.RoutePrefix = "swagger";
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api de Email");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api de E-mail");
             });
 
             app.UseHttpsRedirection();
