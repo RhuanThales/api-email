@@ -2,3 +2,5 @@ obj/
 bin/
 .vscode/
 publish_output/
+/appsettings.Development.json
+/appsettings.json
